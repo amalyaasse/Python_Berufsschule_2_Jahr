@@ -1,35 +1,43 @@
 #zwei randome zufallzahlen erzeugen
 #den nutzer fordern diese zu addieren
 #falls richtig, den nutzer loben
+#wiederholen 10 Mal
+#Am Ende geben wie viel falsch und wie viel richtige Antworten gab
 
 import random
 
 falsch = 0
 richtig = 0
 
+print("Herausforderung randome zahlen addieren: ")
 
-for i in range(1,10):
-    print("addieren Sie die folgende zahlen: ")
+for i in range(1,11):
+    
     x = random.randint(1,100)
     y = random.randint(1,100)
-
-    print(x,"+",y)
     sum = x + y
-    z = float(input("dein Antwort: "))
+    print("Aufgabe",i,":     ", x,"+",y)
+    z = int(input(" = "))
+    
+
+   
+    
+    
    
    
     if(z == sum):
-        print("prima, dein Antwort ist richtig")
+        print("prima!")
+        print("                           ")
         richtig +=1
-        print("-------------nächste Aufgabe-----------------")
+        
     else:
-        print("Leider falsch!")
+        print("Leider falsch! richtig wäre ",z)
         falsch +=1
-        print("-------------nächste Aufgabe-----------------")
+        
 
-print("                         Ende des Herausforderung                    ")
-print("                         Richtige Antworten:                         ", richtig)
-print("                         Falsche Antworten:                          ",falsch)
+print("                         Ende des Herausforderung  ")
+print("                         Richtige Antworten:        ", richtig)
+print("                         Falsche Antworten:         ",falsch)
 
 
 
